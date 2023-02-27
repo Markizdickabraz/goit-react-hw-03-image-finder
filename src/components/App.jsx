@@ -1,7 +1,7 @@
 import Searchbar from './Searchbar/Searchbar'
 import React , { Component} from 'react'
-// import { AppStyled } from './AppStyled'
 import GlobalStyle from 'globalStyled'
+import { AppStyled } from './AppStyled'
 
 class App extends Component {
   state = {
@@ -15,10 +15,10 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <AppStyled>
         <GlobalStyle />
   <Searchbar onSubmit ={this.onSubmit} />
-      </div>
+      </AppStyled>
     );
 
 
