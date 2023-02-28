@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 import { SearchForm, SearchbarBtn, SearchBtnLabel, SearchInput, SearchbarStyled } from "./searchbarStyled";
 
+
 class Searchbar extends Component {
     state = {
-        page: 1,
-        perPage: 1,
         name: ''
     }
      

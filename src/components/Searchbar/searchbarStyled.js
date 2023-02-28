@@ -1,5 +1,6 @@
 import styled from "styled-components";
-
+// import glass from '@styled-icons / open - iconic / MagnifyingGlass'
+ 
 export const SearchForm = styled.form`
   display: flex;
   align-items: center;
@@ -13,7 +14,7 @@ export const SearchbarBtn = styled.button`
    display: inline-block;
    width: 48px;
    height: 48px;
-   background-image: url('https://image.flaticon.com/icons/svg/149/149852.svg');
+  //  background-image: url('https://icons8.com/icon/dZDGf6SjUxwC/magnifying-glass');
    background-size: 40%;
    background-repeat: no-repeat;
    background-position: center;
