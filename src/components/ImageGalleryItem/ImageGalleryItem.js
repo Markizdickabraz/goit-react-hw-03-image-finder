@@ -1,10 +1,13 @@
+import { GalleryImageStyled, GalleryItemStyled } from "./ImageGalleryItemsStyled";
 
-export default function ImageGalleryItem({id , tag, url}) {
-;
+export default function ImageGalleryItem({items}) {
+
     return (
-        <ImageGalleryItem key = {id}> 
-            <img src= {url} alt= {tag} />
-                </ImageGalleryItem>
+        items.map(item => (
+        <GalleryItemStyled key ={item.id}>
+            <GalleryImageStyled src={item.webformatURL} alt={item.tags} />
+        </GalleryItemStyled>
+        ))
         )
 }
 

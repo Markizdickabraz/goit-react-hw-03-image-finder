@@ -14,14 +14,15 @@ class Searchbar extends Component {
 
 
   formSubmit = e => {
-      e.preventDefault();
-      this.props.onSubmit(this.state);
-    //   this.reset();
+    e.preventDefault();
+    if (this.state.name.trim() === '') {
+      alert('Там цей скрока пуста!');
+      return;
+    }
+    this.props.onSubmit(this.state);
+    this.setState({name: ''})
   }
-    
-//     reset = () => {
-//     this.setState({name : ''})
-// }
+
 
     render() {
         return (
