@@ -17,5 +17,3 @@ export const ModalStyled = styled.div`
 max-width: 70vw;
 max-height: 70vh;
 `
-
-

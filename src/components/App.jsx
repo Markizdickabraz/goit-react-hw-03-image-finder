@@ -24,7 +24,7 @@ class App extends Component {
       <AppStyled>
         <GlobalStyle />
         <Searchbar onSubmit={this.onSubmit} />
-        <ImageGallary name={this.state.name} />  
+        {this.state.data !== null && <ImageGallary name={this.state.name} />  }
       </AppStyled>
     );
   }

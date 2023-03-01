@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { SearchForm, SearchbarBtn, SearchBtnLabel, SearchInput, SearchbarStyled } from "./searchbarStyled";
-
+import { SearchForm, SearchbarBtn, SearchInput, SearchbarStyled } from "./searchbarStyled";
+import {ReactComponent as SaerchIcon} from '../../svg/search.svg'
 
 class Searchbar extends Component {
     state = {
@@ -29,7 +29,9 @@ class Searchbar extends Component {
     <SearchbarStyled>
         <SearchForm onSubmit={this.formSubmit}>
     <SearchbarBtn type="submit">
-      <SearchBtnLabel>Search</SearchBtnLabel>
+              
+                  <SaerchIcon></SaerchIcon>
+                  
     </SearchbarBtn>
 
     <SearchInput
