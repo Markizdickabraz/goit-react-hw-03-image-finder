@@ -22,7 +22,7 @@ class App extends Component {
         <GlobalStyle />
         <Searchbar onSubmit={this.onSubmit} />
         <ImageGallary name={this.state.name} />  
-
+          
       </AppStyled>
     );
   }
