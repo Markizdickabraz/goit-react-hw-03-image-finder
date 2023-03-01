@@ -5,8 +5,8 @@ export default function Loader () {
     return (
         <LoaderStyled>
             <Oval
-                height={40}
-                width={40}
+                height={80}
+                width={80}
                 color="#000"
                 wrapperStyle={{}}
                 wrapperClass=""

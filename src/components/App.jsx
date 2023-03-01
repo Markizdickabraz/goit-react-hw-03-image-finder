@@ -4,12 +4,15 @@ import GlobalStyle from 'globalStyled'
 import Searchbar from './Searchbar/Searchbar'
 import ImageGallary from './ImageGallery/ImageGallery'
 
+
 class App extends Component {
   state = {
     name: '',
-    data: null
+    data: null,
   }
   
+
+
   onSubmit = (data) => {
     this.setState({
       name: data.name})
@@ -22,7 +25,6 @@ class App extends Component {
         <GlobalStyle />
         <Searchbar onSubmit={this.onSubmit} />
         <ImageGallary name={this.state.name} />  
-          
       </AppStyled>
     );
   }
