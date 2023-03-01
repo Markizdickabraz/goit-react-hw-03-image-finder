@@ -1,9 +1,9 @@
 import ImageGalleryItem from '../ImageGalleryItem/ImageGalleryItem'
 import React, { Component } from 'react'
 import { GalleryStyled } from './ImageGalleryStyled'
-import { Oval } from  'react-loader-spinner'
 import LoadMore from '../Button/Button'
 import axios from 'axios'
+import Loader from 'components/Loader/Loader'
 
 
 class ImageGallary extends Component {
@@ -35,6 +35,9 @@ class ImageGallary extends Component {
   async componentDidUpdate(prevProps, prevState) {
 
     if (this.props.name !== prevProps.name) {
+      this.setState({
+        perPage: 12
+      })
         this.fetch()
       
     }
@@ -57,18 +60,7 @@ class ImageGallary extends Component {
             <GalleryStyled>
                 {this.state.data !== null &&  <ImageGalleryItem items ={this.state.data} />}
             </GalleryStyled>
-            {this.state.loading &&  <Oval
-                height={40}
-                width={40}
-                color="#000"
-                wrapperStyle={{}}
-                wrapperClass=""
-                visible={true}
-                ariaLabel='oval-loading'
-                secondaryColor="#4fa94d"
-                strokeWidth={2}
-                strokeWidthSecondary={2}
-              />}
+            {this.state.loading && <Loader /> }
             {this.state.data !== null && <LoadMore click={this.loadMoreClick} />}
             </div>
     )
