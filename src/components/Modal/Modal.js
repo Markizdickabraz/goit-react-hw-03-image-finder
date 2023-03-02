@@ -22,9 +22,12 @@ export default class Modal extends Component {
     
 
     render() {
+        const {onClick, src, alt} = this.props
         return createPortal(
-            <Overlay onClick={this.props.onClick}>
-                <ModalStyled>{this.props.children}</ModalStyled>
+            <Overlay onClick={onClick}>
+                <ModalStyled
+                     src={src} alt={alt} />
+                
             </Overlay>, modalRoot
         )
     }
