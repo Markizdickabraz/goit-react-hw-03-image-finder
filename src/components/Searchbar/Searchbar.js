@@ -18,7 +18,7 @@ class Searchbar extends Component {
   formSubmit = e => {
     e.preventDefault();
     if (this.state.name.trim() === '') {
-      alert('Там цей скрока пуста!');
+      alert('Там цей, строка пуста!');
       return;
     }
     this.props.onSubmit(this.state);
