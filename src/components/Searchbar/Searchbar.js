@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { SearchForm, SearchbarBtn, SearchInput, SearchbarStyled } from "./searchbarStyled";
-import {ReactComponent as SaerchIcon} from '../../svg/search.svg'
+import { ReactComponent as SaerchIcon } from '../../svg/search.svg'
+import PropTypes from 'prop-types';
+
 
 class Searchbar extends Component {
     state = {
@@ -49,3 +51,7 @@ class Searchbar extends Component {
 }
 
 export default Searchbar;
+
+Searchbar.ptopTypes = {
+  onSubmit: PropTypes.func.isRequired
+}

@@ -1,5 +1,7 @@
 import { BtnLoadMore } from 'components/Button/buttonStyled'
-import React, {Component} from 'react'
+import React, { Component } from 'react'
+import PropTypes from 'prop-types';
+
 
 class LoadMore extends Component {
     
@@ -19,3 +21,7 @@ class LoadMore extends Component {
 }
 
 export default LoadMore;
+
+LoadMore.propTypes = {
+    click : PropTypes.func.isRequired
+}

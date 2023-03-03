@@ -1,17 +1,21 @@
 import ImageGalleryItem from '../ImageGalleryItem/ImageGalleryItem'
 import React, { Component } from 'react'
 import { GalleryStyled } from './ImageGalleryStyled'
+import PropTypes from 'prop-types';
+
 
 export default class ImageGallary extends Component {
   state = {
         data: null,
-        loading: false,
-        name: ''
+        name: '' 
     }
     
-  // componentDidMount() {
-  //   this.setState({data: this.props.data})
-  // }
+  componentDidUpdate(prevProps, prevState) {
+    if (prevProps.data !== this.props.data) {
+      
+      this.setState({data: this.props.data})
+    }
+  }
   
   galleryItemClick =(e) => {
     if (e.target.nodeName !== 'IMG') {
@@ -27,10 +31,15 @@ export default class ImageGallary extends Component {
         return (
             <div>
             {this.state.data !== null && <GalleryStyled onClick={this.galleryItemClick}>
-              <ImageGalleryItem items={this.props.data} />
+              <ImageGalleryItem items={this.state.data} />
             </GalleryStyled>}
                     </div>
     )
     }
 }
 
+ImageGallary.propTypes = {
+  data: PropTypes.arrayOf(PropTypes.object),
+  modalItems: PropTypes.func.isRequired,
+  toggleModal: PropTypes.func.isRequired
+}
